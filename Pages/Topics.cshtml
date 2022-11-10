@@ -1,0 +1,25 @@
+﻿@page
+@model foro.Pages.TopicsModel
+@{
+    ViewData["Title"] = "Lista de temas";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>User</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var item in Model.topics){
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.UserId</td>
+        </tr>
+        }
+    </tbody>
+</table>
